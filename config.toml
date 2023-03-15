@@ -1,0 +1,67 @@
+baseURL = 'http://mobconverge.com/'
+languageCode = 'en-us'
+title = 'Mobconverge, LLC'
+theme = "hugo-initio"
+
+[params]
+  name = "Mobconverge LLC"
+  description = "Software Engineering Services"
+  email = "info@mobconverge.com"
+  phone = ""
+  address = ""
+  year = 2023
+  avatar = "images/logo-small.png"
+  avatarclass = "circle"
+  banner = "images/background.jpg"
+  background = ""
+  favicon = "images/gt_favicon.png"
+  DateForm = "January 2, 2006"
+
+  showSubheader = true
+  showServices = true
+  showRecentWorks = true
+  showDownloads = false
+  showClients = true
+
+  showFooterContact = true
+  showFooterFollowMe = true
+  showFooterTextWidget = false
+  showFooterFormWidget = false
+
+[[menu.main]]
+  name = "home"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  name = "blog"
+  url = "/post/"
+  weight = 5
+[[menu.main]]
+  name = "about"
+  url = "/about"
+  weight = 5
+
+[params.google.analytics]
+  trackerID = "GA-000000000-0"
+
+[[params.social]]
+  title = "linkedin"
+  url = "https://www.linkedin.com/company/mobconverge-llc"
+  icon = "fab fa-linkedin"
+  footer = true
+  sharethis = true
+  network = "linkedin"
+[[params.social]]
+  title = "github"
+  url = "https://github.com/mobconverge"
+  icon = "fab fa-github"
+  footer = true
+  sharethis = false
+  network = ""
+[[params.social]]
+  title = "email"
+  url = "mailto:info@mobconverge.com"
+  icon = "fas fa-envelope-square"
+  footer = true
+  sharethis = true
+  network = "email"
