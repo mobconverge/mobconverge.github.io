@@ -1,0 +1,17 @@
+[
+  {
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/company/mobconverge-llc",
+    "image": "images/social/linkedin.svg"
+  },
+  {
+    "name": "GitHub",
+    "link": "https://github.com/mobconverge",
+    "image": "images/social/github.svg"
+  },
+  {
+    "name": "Email",
+    "link": "mailto:info@mobconverge.com",
+    "image": "images/social/email.svg"
+  }
+]

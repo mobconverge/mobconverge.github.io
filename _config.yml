@@ -1,0 +1,40 @@
+baseurl: ''
+url: 'https://mobconverge.com'
+permalink: pretty
+title: 'Mobconverge, LLC'
+description: 'Expert-led mobile & web development. Native iOS, Android, and web engineering services.'
+
+logo:
+  mobile: "images/logo-small.png"
+  mobile_height: "34px"
+  mobile_width: "34px"
+  desktop: "images/logo.png"
+  desktop_height: "34px"
+  desktop_width: "205px"
+
+home:
+  limit_services: 6
+
+collections:
+  services:
+    output: false
+    sort_by: weight
+
+sass:
+  style: compressed # possible values: nested expanded compact compressed
+
+plugins:
+  - jekyll-environment-variables
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - LICENSE.md
+  - LICENSE
+  - README.md

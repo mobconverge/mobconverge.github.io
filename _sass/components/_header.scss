@@ -1,0 +1,41 @@
+.header {
+  color: $primary;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 15px rgba(50, 50, 93, 0.1);
+  border-bottom: 1px solid $white-offset;
+  padding: 10px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &.header-absolute {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+  }
+}
+.lock-scroll {
+  .header {
+    &.header-absolute {
+      position: static;
+    }
+  }
+}
+.header-nav-group {
+  display: flex;
+  align-items: center;
+}
+.header-cta {
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: inline-block;
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,82 @@
+---
+layout: default
+bodyClass: "page-home"
+---
+
+<div class="intro intro-photo" role="img" aria-label="Modern architectural interior, representing thoughtful, well-crafted engineering work" style="--intro-bg-mobile: url('{{ '/images/arch-background-mobile.jpg' | relative_url }}'); --intro-bg-desktop: url('{{ '/images/arch-background.jpg' | relative_url }}');">
+  <div class="intro-overlay"></div>
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-9 col-lg-7">
+        {{ content }}
+        <a href="{{ site.data.contact.contact_button_link }}" class="button button-lg">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="services" class="strip strip-grey">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 text-center">
+        <h2 class="title section-title">Services</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center">
+      {% assign services = site.services | sort: 'weight' %}
+      {% for service in services %}
+      <div class="col-12 col-md-6 mb-2">
+        <div class="service service-summary">
+          <div class="service-content">
+            <h3 class="service-title">{{ service.title }}</h3>
+            <p>{{ service.content | strip_html }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div id="about" class="strip">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-md-8">
+        <h2 class="title section-title">About</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-start">
+      <div class="col-9 col-sm-7 col-md-5 col-lg-4 mb-3 mb-md-0">
+        <img alt="Mark Schisler, Principal at Mobconverge" class="about-photo img-fluid" src="{{ '/images/selfie.jpg' | relative_url }}" />
+      </div>
+      <div class="col-12 col-md-7 col-lg-6 text-center text-md-start">
+        <h3>Mark Schisler, Principal</h3>
+        <div class="content">
+          {% include about-content.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="contact" class="strip strip-grey">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-md-8">
+        <h2 class="title section-title">Contact</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-start">
+      {% if site.data.contact.address_map_embed %}
+      <div class="col-9 col-sm-7 col-md-5 col-lg-4 mb-3 mb-md-0">
+        <div class="call-map">
+          <iframe src="{{ site.data.contact.address_map_embed }}" width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to {{ site.data.contact.address_name | default: site.data.contact.address_line1 }}"></iframe>
+        </div>
+      </div>
+      {% endif %}
+      <div class="col-12 col-md-7 col-lg-6 text-center text-md-start">
+        {% include call.html show_button=false %}
+      </div>
+    </div>
+  </div>
+</div>
