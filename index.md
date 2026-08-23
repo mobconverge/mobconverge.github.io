@@ -1,5 +1,5 @@
 ---
-title: Mobconverge, LLC
+title: Mobconverge, LLC — Expert-led mobile & web development
 layout: home
 description: 'Expert-led mobile & web development. We turn your product vision into native iOS, Android, and web software, built right.'
 ---
