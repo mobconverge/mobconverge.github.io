@@ -9,7 +9,7 @@ bodyClass: "page-home"
     <div class="row justify-content-start">
       <div class="col-12 col-md-9 col-lg-7">
         {{ content }}
-        <a href="{{ site.data.contact.contact_button_link }}" class="button button-lg">Get in touch</a>
+        <a href="{{ site.data.contact.contact_button_link }}" class="button button-lg d-none d-md-inline-block">Get in touch</a>
       </div>
     </div>
   </div>
@@ -75,7 +75,7 @@ bodyClass: "page-home"
       </div>
       {% endif %}
       <div class="col-12 col-md-7 col-lg-6 text-center text-md-start">
-        {% include call.html show_button=false %}
+        {% include call.html show_button=true %}
       </div>
     </div>
   </div>
