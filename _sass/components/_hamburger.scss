@@ -9,27 +9,24 @@
   &:focus {
     outline: none;
   }
-  .hamburger-inner,
-  .hamburger-inner::before,
-  .hamburger-inner::after {
+  .hamburger-inner {
     background: $primary;
+    transition: transform 0.15s ease, background-color 0.35s ease;
+  }
+  .hamburger-inner::before {
+    background: $primary;
+    transition: transform 0.15s ease, opacity 0.15s ease, background-color 0.35s ease;
   }
   .hamburger-inner::after {
+    background: $primary;
     width: 18px;
     right: 0;
+    transition: transform 0.15s ease, background-color 0.35s ease;
   }
   &.is-active {
     .hamburger-inner::after {
       width: inherit;
       right: unset;
-    }
-    // The header keeps its white background while the mobile menu is open,
-    // so the icon must stay on-brand color instead of the library's default
-    // active color (white), which would be invisible against it.
-    .hamburger-inner,
-    .hamburger-inner::before,
-    .hamburger-inner::after {
-      background: $primary;
     }
   }
 }

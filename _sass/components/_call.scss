@@ -24,11 +24,9 @@
   }
   .call-box-bottom {
     flex: auto;
-    padding: 20px;
-    border-top: 1px solid darken($white-offset, 5%);
+    padding: 40px 20px 20px;
     @include media-breakpoint-up(sm) {
       flex: 0 0 auto;
-      border: none;
     }
   }
   .call-name {
