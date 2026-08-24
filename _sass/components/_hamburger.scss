@@ -23,5 +23,13 @@
       width: inherit;
       right: unset;
     }
+    // The header keeps its white background while the mobile menu is open,
+    // so the icon must stay on-brand color instead of the library's default
+    // active color (white), which would be invisible against it.
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background: $primary;
+    }
   }
 }
