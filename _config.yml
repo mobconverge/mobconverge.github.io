@@ -3,6 +3,9 @@ url: 'https://mobconverge.com'
 permalink: pretty
 title: 'Mobconverge, LLC'
 description: 'Expert-led mobile & web development. Native iOS, Android, and web engineering services.'
+lang: 'en'
+locale: 'en_US'
+theme_color: '#1b3a6b'
 
 logo:
   mobile: "images/logo-small.png"
@@ -12,13 +15,26 @@ logo:
   desktop_height: "34px"
   desktop_width: "205px"
 
-home:
-  limit_services: 6
-
 collections:
   services:
-    output: false
+    output: true
+    permalink: /services/:name/
     sort_by: weight
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/images/og-share.jpg"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+
+# Jekyll skips dot-directories unless they are explicitly included.
+include:
+  - .well-known
 
 sass:
   style: compressed # possible values: nested expanded compact compressed
@@ -26,6 +42,7 @@ sass:
 plugins:
   - jekyll-environment-variables
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 exclude:
   - Gemfile

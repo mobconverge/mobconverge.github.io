@@ -1,56 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'en' }}">
 
 <head>
   <meta charset="utf-8">
-  <title>{% if page.title %}{{page.title}}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16x16.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="48x48" href="{{ '/images/favicon-48x48.png' | relative_url }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/favicon-180x180.png' | relative_url }}">
-  <!-- Google Fonts CDN -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
-
-  {% assign share_image = page.image | default: '/images/og-share.jpg' %}
-  {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
-  {% if page.meta_title %}<meta property="og:title" content="{{ page.meta_title }}"/>{% else %}<meta property="og:title" content="{{ page.title }}"/>{% endif %}
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="{{ page.url | absolute_url }}"/>
-  <meta property="og:image" content="{{ share_image | absolute_url }}"/>
-  {% if page.description %}<meta property="og:description" content="{{ page.description }}"/>{% endif %}
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image" content="{{ share_image | absolute_url }}"/>
-  {% if site.data.seo.meta_twitter_site %}<meta name="twitter:site" content="{{ site.data.seo.meta_twitter_site }}"/>{% endif %}
-  {% if site.data.seo.meta_twitter_creator %}<meta name="twitter:creator" content="{{ site.data.seo.meta_twitter_creator }}"/>{% endif %}
-
-  {% if page.layout == 'home' %}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "{{ site.title }}",
-    "description": "{{ site.description }}",
-    "url": "{{ site.url }}{{ site.baseurl }}/",
-    "image": "{{ share_image | absolute_url }}",
-    "email": "{{ site.data.contact.email }}",
-    "address": {
-      "@type": "PostalAddress",
-      "name": "{{ site.data.contact.address_name }}",
-      "streetAddress": "{{ site.data.contact.address_line1 }}",
-      "addressLocality": "{{ site.data.contact.address_city }}",
-      "addressRegion": "{{ site.data.contact.address_state }}",
-      "postalCode": "{{ site.data.contact.address_zip }}",
-      "addressCountry": "US"
-    }
-  }
-  </script>
-  {% endif %}
+  {% include head-meta.html %}
+  {% include schema.html %}
 </head>
 
 <body class='page {{layout.bodyClass}}'>

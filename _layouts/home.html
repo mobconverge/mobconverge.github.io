@@ -28,12 +28,17 @@ bodyClass: "page-home"
       <div class="col-12 col-md-6 mb-2">
         <div class="service service-summary">
           <div class="service-content">
-            <h3 class="service-title">{{ service.title }}</h3>
-            <p>{{ service.content | strip_html }}</p>
+            <h3 class="service-title"><a href="{{ service.url | relative_url }}">{{ service.title }}</a></h3>
+            <p>{{ service.summary }}</p>
           </div>
         </div>
       </div>
       {% endfor %}
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-12">
+        <p class="pt-4"><a href="{{ '/services/' | relative_url }}">See all services</a></p>
+      </div>
     </div>
   </div>
 </div>
@@ -47,19 +52,40 @@ bodyClass: "page-home"
     </div>
     <div class="row justify-content-center align-items-start">
       <div class="col-9 col-sm-7 col-md-5 col-lg-4 mb-3 mb-md-0">
-        <img alt="Mark Schisler, Principal at Mobconverge" class="about-photo img-fluid" src="{{ '/images/selfie.jpg' | relative_url }}" />
+        <img alt="Mark Schisler, Principal at Mobconverge" class="about-photo img-fluid" width="600" height="800" loading="lazy" decoding="async" src="{{ '/images/selfie.jpg' | relative_url }}" />
       </div>
       <div class="col-12 col-md-7 col-lg-6 text-center text-md-start">
         <h3>Mark Schisler, Principal</h3>
         <div class="content">
           {% include about-content.html %}
         </div>
+        <p><a href="{{ '/about/' | relative_url }}">More about Mark</a></p>
       </div>
     </div>
   </div>
 </div>
 
-<div id="contact" class="strip strip-grey">
+<div id="faq" class="strip strip-grey">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-md-8">
+        <h2 class="title section-title">Frequently asked questions</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9 col-lg-8">
+        {% for item in site.data.faq %}
+        <div class="faq-item pb-4">
+          <h3 class="faq-question">{{ item.question }}</h3>
+          <p class="faq-answer">{{ item.answer }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="contact" class="strip">
   <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
     <div class="row justify-content-center text-center">
       <div class="col-12 col-md-8">

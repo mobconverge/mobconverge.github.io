@@ -1,0 +1,24 @@
+{%- comment -%}
+Renders a breadcrumb trail. Services derive theirs automatically; any other page
+can opt in with `breadcrumbs:` front matter of `- name:` / `- url:` pairs.
+{%- endcomment -%}
+{% if page.collection == 'services' %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
+    <li><span aria-current="page">{{ page.title }}</span></li>
+  </ol>
+</nav>
+{% elsif page.breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    {% for crumb in page.breadcrumbs %}
+    <li>
+      {% if forloop.last %}<span aria-current="page">{{ crumb.name }}</span>
+      {% else %}<a href="{{ crumb.url | relative_url }}">{{ crumb.name }}</a>{% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</nav>
+{% endif %}

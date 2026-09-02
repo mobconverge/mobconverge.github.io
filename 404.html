@@ -1,0 +1,40 @@
+---
+layout: default
+permalink: /404.html
+sitemap: false
+noindex: true
+title: "Page not found"
+description: "That page doesn't exist. Here's where to go instead."
+bodyClass: "page-404"
+---
+
+<div class="strip">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9 col-lg-8">
+        <h1 class="title">Page not found</h1>
+        <p class="lead">The page you were looking for isn't here — it may have moved when we rebuilt the site. Here's where to go instead.</p>
+
+        <h2 class="section-title pt-4">Services</h2>
+        <ul class="mb-5">
+          {% assign services = site.services | sort: 'weight' %}
+          {% for service in services %}
+          <li><a href="{{ service.url | relative_url }}">{{ service.title }}</a></li>
+          {% endfor %}
+          <li><a href="{{ '/services/' | relative_url }}">All services</a></li>
+        </ul>
+
+        <h2 class="section-title pt-4">Elsewhere</h2>
+        <ul class="mb-4">
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About Mark Schisler</a></li>
+          <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+        </ul>
+
+        <p class="pt-4">
+          <a href="{{ site.data.contact.contact_button_link }}" class="button button-lg">Get in touch</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

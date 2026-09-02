@@ -1,0 +1,23 @@
+- question: "What kind of work does Mobconverge take on?"
+  answer: "We design, build, and ship native mobile and web products. That covers custom iOS and Android applications in Kotlin, Swift, Objective-C and Java; web platforms and APIs in Python, Go, and Ruby on Rails; and hands-on engineering leadership for teams that want to raise the bar."
+
+- question: "Which languages and platforms do you work in?"
+  answer: "Native iOS, Android, and Linux applications in Kotlin, Swift, Objective-C and Java. On the web and API side, Python, Go, and Ruby on Rails."
+
+- question: "How do you use AI in your development process?"
+  answer: "Modern AI tooling accelerates the work, but every decision is still made and owned by an experienced engineer. Every line is reviewed, tested, and owned by a person who can explain why it is there — you get the speed of AI-assisted development with the judgment and accountability of someone who has shipped production software for two decades."
+
+- question: "What engineering practices do you follow?"
+  answer: "Extreme Programming (XP), Test-Driven Development, Lean Software Development, Kanban, and Continuous Integration. These are how the work gets done rather than optional extras."
+
+- question: "Do I own the code you write?"
+  answer: "Yes. The application delivered is yours, and is completely scalable and testable. There is no proprietary framework to license and no dependency on us to keep it running — if you bring the work in-house or hand it to another team, the codebase, the tests, and the build pipeline go with it."
+
+- question: "Where are you located, and do you work remotely?"
+  answer: "Mobconverge is based at Coradius Coworking Space, 5850 Macklind Ave, St. Louis, MO 63109, and works with clients across the United States."
+
+- question: "Who have you worked with?"
+  answer: "Mark has led engineering for products used by millions, including apps recognized by the White House as a Champion of Change and a connected-home product ranked highest in customer satisfaction by J.D. Power, and has partnered with brands like Disney, Emerson, ESPN, and MLS club St. Louis CITY SC."
+
+- question: "How do I start a project with you?"
+  answer: "Email info@mobconverge.com with a short description of what you are building and where it stands today."

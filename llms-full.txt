@@ -1,0 +1,55 @@
+---
+permalink: /llms-full.txt
+sitemap: false
+layout: null
+---
+# {{ site.title }} — full site text
+
+> {{ site.description }}
+
+Source: {{ '/' | absolute_url }}
+Generated: {{ site.time | date: "%Y-%m-%d" }}
+
+---
+
+## Home
+
+{{ site.pages | where: "url", "/" | first | map: "content" | first | strip_html | strip }}
+
+Mobconverge is led by Mark Schisler, Principal, and is based at {{ site.data.contact.address_name }}, {{ site.data.contact.address_line1 }}, {{ site.data.contact.address_city }}, {{ site.data.contact.address_state }} {{ site.data.contact.address_zip }}.
+
+---
+
+## Services
+{% assign services = site.services | sort: 'weight' %}{% for service in services %}
+### {{ service.title }}
+
+URL: {{ service.url | absolute_url }}
+
+{{ service.content | strip_html | strip }}
+
+---
+{% endfor %}
+## About Mark Schisler
+
+URL: {{ '/about/' | absolute_url }}
+
+{% capture about %}{% include about-content.html %}{% endcapture %}{{ about | strip_html | strip }}
+
+---
+
+## Frequently asked questions
+{% for item in site.data.faq %}
+### {{ item.question }}
+
+{{ item.answer }}
+{% endfor %}
+---
+
+## Contact
+
+Email: {{ site.data.contact.email }}
+Address: {{ site.data.contact.address_name }}, {{ site.data.contact.address_line1 }}, {{ site.data.contact.address_city }}, {{ site.data.contact.address_state }} {{ site.data.contact.address_zip }}, USA
+Map: {{ site.data.contact.address_link }}
+{% for s in site.data.social %}{% unless s.link contains 'mailto:' %}{{ s.name }}: {{ s.link }}
+{% endunless %}{% endfor %}

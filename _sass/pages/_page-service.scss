@@ -11,3 +11,22 @@
     }
   }
 }
+
+.page-services {
+  .service-summary {
+    border-bottom: 1px solid rgba($steel, 0.15);
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    .service-title {
+      font-size: 24px;
+      margin-bottom: 12px;
+      a {
+        color: $black;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

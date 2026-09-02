@@ -1,0 +1,47 @@
+---
+layout: default
+bodyClass: "page-service"
+---
+
+<div class="strip">
+  <div class="container pt-6 pb-4 pt-md-8 pb-md-6">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9 col-lg-8">
+        {% include breadcrumbs.html %}
+        <h1 class="title">{{ page.title }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="container pb-6 pb-md-10">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9 col-lg-8">
+        <div class="content">
+          {{ content }}
+        </div>
+        <p class="pt-4">
+          <a href="{{ site.data.contact.contact_button_link }}" class="button button-lg">Get in touch</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip strip-grey">
+  <div class="container pt-6 pb-6 pt-md-8 pb-md-8">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9 col-lg-8">
+        <h2 class="title section-title">Other services</h2>
+        <ul class="mb-4">
+          {% assign others = site.services | sort: 'weight' %}
+          {% for service in others %}{% unless service.url == page.url %}
+          <li><a href="{{ service.url | relative_url }}">{{ service.title }}</a></li>
+          {% endunless %}{% endfor %}
+        </ul>
+        <p><a href="{{ '/services/' | relative_url }}">All services</a></p>
+      </div>
+    </div>
+  </div>
+</div>

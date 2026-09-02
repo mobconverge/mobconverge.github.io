@@ -1,6 +1,18 @@
 ---
+sitemap: false
 ---
+# Mobconverge, LLC — https://mobconverge.com
+# Machine-readable summary for LLM agents: {{ "/llms.txt" | absolute_url }}
+# Full text for LLM agents:                {{ "/llms-full.txt" | absolute_url }}
+# Structured profile (JSON):               {{ "/profile.json" | absolute_url }}
+
 User-agent: *
 Allow: /
 
+# AI crawlers and answer engines are explicitly welcome.
+{% assign ai_agents = "GPTBot,OAI-SearchBot,ChatGPT-User,ClaudeBot,Claude-User,Claude-SearchBot,anthropic-ai,PerplexityBot,Perplexity-User,Google-Extended,Applebot-Extended,CCBot,Bytespider,meta-externalagent,Amazonbot,cohere-ai,Diffbot,YouBot,Timpibot,DuckAssistBot,MistralAI-User" | split: "," %}
+{% for agent in ai_agents %}User-agent: {{ agent }}
+Allow: /
+
+{% endfor %}
 Sitemap: {{ "/sitemap.xml" | absolute_url }}

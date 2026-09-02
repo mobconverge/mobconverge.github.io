@@ -1,12 +1,33 @@
 main:
   - name: "Services"
-    url: "/#services"
+    url: "/services/"
     weight: 2
   - name: "About"
-    url: "/#about"
+    url: "/about/"
     weight: 3
   - name: "Contact"
     url: "/#contact"
     weight: 4
 
-footer: []
+footer:
+  - name: "Native apps"
+    url: "/services/native-apps/"
+    weight: 1
+  - name: "AI-assisted development"
+    url: "/services/ai-assisted-development/"
+    weight: 2
+  - name: "Web development"
+    url: "/services/web-development/"
+    weight: 3
+  - name: "Entrepreneurship"
+    url: "/services/entrepreneurship/"
+    weight: 4
+  - name: "Leadership"
+    url: "/services/leadership/"
+    weight: 5
+  - name: "About"
+    url: "/about/"
+    weight: 6
+  - name: "Contact"
+    url: "/#contact"
+    weight: 7

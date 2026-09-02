@@ -1,0 +1,32 @@
+---
+permalink: /llms.txt
+sitemap: false
+layout: null
+---
+# {{ site.title }}
+
+> {{ site.description }} Mobconverge is a boutique software engineering practice led by Mark Schisler, Principal, based in St. Louis, Missouri and working with clients across the United States.
+
+We partner with founders and teams to design, build, and ship native mobile and web products — bringing the craft and care of a dedicated engineering partner to every line of code. Work is delivered test-first, using Extreme Programming, Lean, and Test-Driven Development practices. Clients own the code outright.
+
+## Services
+{% assign services = site.services | sort: 'weight' %}{% for service in services %}
+- [{{ service.title }}]({{ service.url | absolute_url }}): {{ service.description }}{% endfor %}
+
+## Pages
+
+- [Home]({{ '/' | absolute_url }}): Overview of Mobconverge, its services, and how to make contact.
+- [Services]({{ '/services/' | absolute_url }}): Index of all engineering services offered.
+- [About]({{ '/about/' | absolute_url }}): Background on Mark Schisler, Principal — two decades of software leadership.
+
+## Contact
+
+- Email: {{ site.data.contact.email }}
+- Address: {{ site.data.contact.address_name }}, {{ site.data.contact.address_line1 }}, {{ site.data.contact.address_city }}, {{ site.data.contact.address_state }} {{ site.data.contact.address_zip }}, USA
+{% for s in site.data.social %}{% unless s.link contains 'mailto:' %}- {{ s.name }}: {{ s.link }}
+{% endunless %}{% endfor %}
+## Optional
+
+- [Full site text]({{ '/llms-full.txt' | absolute_url }}): Complete prose content of every page in one file.
+- [Structured profile]({{ '/profile.json' | absolute_url }}): Machine-readable JSON summary of the organization, services, and contact details.
+- [Sitemap]({{ '/sitemap.xml' | absolute_url }}): XML sitemap of all indexable URLs.
