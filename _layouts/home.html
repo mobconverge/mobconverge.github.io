@@ -76,7 +76,9 @@ bodyClass: "page-home"
       <div class="col-12 col-md-9 col-lg-8">
         {% for item in site.data.faq %}
         <div class="faq-item pb-4">
-          <h3 class="faq-question">{{ item.question }}</h3>
+          <h3 class="faq-question" tabindex="0" role="button" aria-expanded="false">
+            <span class="faq-icon" aria-hidden="true">+</span>{{ item.question }}
+          </h3>
           <p class="faq-answer">{{ item.answer }}</p>
         </div>
         {% endfor %}
