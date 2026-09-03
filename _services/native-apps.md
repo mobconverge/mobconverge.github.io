@@ -27,7 +27,7 @@ That means writing in the platform's own language and idioms — Kotlin and Java
 
 Test-driven development, continuous integration, and the practices of Extreme Programming are not add-ons here — they are how the work gets done. Every line is reviewed, tested, and owned by an experienced engineer.
 
-Mark has led engineering for products used by millions, including apps recognized by the White House as a Champion of Change and a connected-home product ranked highest in customer satisfaction by J.D. Power, and has partnered with brands like Disney, Emerson, ESPN, and MLS club St. Louis CITY SC.
+Mark has led engineering for products used by millions, including apps recognized by the White House as a Champion of Change and a connected-home product ranked highest in customer satisfaction by J.D. Power, and has partnered with brands like Emerson and MLS club St. Louis CITY SC.
 
 ## The code is yours
 

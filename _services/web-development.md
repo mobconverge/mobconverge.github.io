@@ -29,4 +29,4 @@ Test-driven development, Continuous Integration, Kanban, and Lean Software Devel
 
 ## Who we do it for
 
-Mark brings two decades of software leadership to every engagement, and has partnered with brands like Disney, Emerson, ESPN, and MLS club St. Louis CITY SC to bring their products to life — as well as startups building their first product.
+Mark brings two decades of software leadership to every engagement, and has partnered with brands like Emerson and MLS club St. Louis CITY SC to bring their products to life — as well as startups building their first product.
