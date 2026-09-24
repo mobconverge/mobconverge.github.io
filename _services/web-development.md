@@ -5,7 +5,7 @@ weight: 3
 redirect_from:
   - /home/services/service2/
 summary: "We work with Python, Rails and Golang websites and their associated APIs, mainly geared towards mobile applications using methodologies such as test-driven development."
-description: "Web platforms and APIs in Python, Go, and Ruby on Rails — built test-first and designed to scale with your business and your mobile apps."
+description: "St. Louis web platform and API development in Python, Go, and Ruby on Rails — built test-first to scale with your business and mobile apps."
 ---
 
 We work with Python, Rails and Golang websites and their associated APIs, mainly geared towards mobile applications using methodologies such as test-driven development.

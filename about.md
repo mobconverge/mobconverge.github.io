@@ -4,6 +4,8 @@ title: "About Mark Schisler"
 meta_title: "About — Mark Schisler, Principal"
 description: "Mark Schisler brings two decades of software leadership to every engagement, helping founders and product teams turn ambitious ideas into software people rely on."
 image: "/images/selfie.jpg"
+redirect_from:
+  - /subheader/
 breadcrumbs:
   - name: "Home"
     url: "/"

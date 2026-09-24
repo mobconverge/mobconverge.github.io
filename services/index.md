@@ -2,7 +2,7 @@
 layout: default
 title: "Services"
 meta_title: "Services — Mobile, Web & AI-Assisted Development"
-description: "Native iOS and Android apps, web platforms and APIs, AI-assisted development, product partnership, and hands-on engineering leadership."
+description: "St. Louis-based native iOS and Android apps, web platforms and APIs, AI-assisted development, product partnership, and hands-on engineering leadership."
 redirect_from:
   - /home/services/
 breadcrumbs:
