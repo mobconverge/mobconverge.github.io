@@ -18,6 +18,7 @@ We partner with founders and teams to design, build, and ship native mobile and 
 - [Home]({{ '/' | absolute_url }}): Overview of Mobconverge, its services, and how to make contact.
 - [Services]({{ '/services/' | absolute_url }}): Index of all engineering services offered.
 - [About]({{ '/about/' | absolute_url }}): Background on Mark Schisler, Principal — two decades of software leadership.
+- [Privacy Policy]({{ '/privacy/' | absolute_url }}): How information from site visitors and email inquiries is handled.
 
 ## Contact
 

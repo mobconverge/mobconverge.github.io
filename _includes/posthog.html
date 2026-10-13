@@ -1,0 +1,22 @@
+{%- comment -%}
+PostHog analytics. Renders only in production builds when POSTHOG_KEY is set;
+the deploy workflow passes it (and the optional POSTHOG_HOST) from the
+repository's Actions variables. The project key is public by design: it can
+send events, not read them.
+{%- endcomment -%}
+{%- assign posthog_key = site.env.POSTHOG_KEY | strip -%}
+{%- if jekyll.environment == "production" and posthog_key != "" and posthog_key -%}
+{%- assign posthog_host = site.env.POSTHOG_HOST | strip | default: "https://us.i.posthog.com" -%}
+{%- assign posthog_assets = posthog_host | replace: ".i.posthog.com", "-assets.i.posthog.com" %}
+<script>
+  function initPostHog() {
+    posthog.init({{ posthog_key | jsonify }}, {
+      api_host: {{ posthog_host | jsonify }},
+      defaults: '2026-08-30',
+      person_profiles: 'identified_only',
+      respect_dnt: true
+    });
+  }
+</script>
+<script async crossorigin="anonymous" src="{{ posthog_assets }}/static/array.js" onload="initPostHog()"></script>
+{%- endif -%}

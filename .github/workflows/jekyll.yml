@@ -44,6 +44,9 @@ jobs:
       - name: Build with Jekyll
         env:
           JEKYLL_ENV: production
+          # Set under Settings → Secrets and variables → Actions → Variables.
+          POSTHOG_KEY: ${{ vars.POSTHOG_KEY }}
+          POSTHOG_HOST: ${{ vars.POSTHOG_HOST }}
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
