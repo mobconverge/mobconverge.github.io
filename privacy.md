@@ -28,12 +28,7 @@ bodyClass: "page-privacy"
 
           <h2>Information collected automatically</h2>
           <p>This website is a static site hosted on <a href="https://pages.github.com/">GitHub Pages</a>. When you load a page, your browser connects to GitHub's servers, which may log technical details such as your IP address, browser type, the pages requested, and the time of the request, for security and operational purposes. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's Privacy Statement</a> for how GitHub handles that data.</p>
-          {% assign posthog_key = site.env.POSTHOG_KEY | strip %}
-          {% if posthog_key != "" and posthog_key %}
-          <p>We use <a href="https://posthog.com/">PostHog</a> to understand, in aggregate, how visitors find and use the site. PostHog records information such as pages viewed, links clicked, referring site, browser, device, and approximate location derived from your IP address, and stores an anonymous identifier in a cookie and your browser's local storage so repeat visits can be recognized. We do not use it to identify you personally, and if your browser sends a Do Not Track signal, the PostHog script still loads but records no events. See <a href="https://posthog.com/privacy">PostHog's privacy policy</a>.</p>
-          {% else %}
-          <p>We do not use analytics, advertising, or tracking scripts, and this site does not set its own cookies.</p>
-          {% endif %}
+          <p>We use <a href="https://posthog.com/">PostHog</a> to understand, in aggregate, how visitors find and use the site. PostHog records information such as pages viewed, links clicked, referring site, browser, device, and approximate location derived from your IP address, without setting cookies or storing anything in your browser. Instead, PostHog's servers derive a privacy-preserving hash from your IP address and browser details to count unique visits. We do not use it to identify you personally, and if your browser sends a Do Not Track signal, the PostHog script still loads but records no events. See <a href="https://posthog.com/privacy">PostHog's privacy policy</a>.</p>
 
           <h2>Third-party services</h2>
           <p>Some page elements are loaded from third parties, which receive your IP address and standard browser information when they are requested:</p>

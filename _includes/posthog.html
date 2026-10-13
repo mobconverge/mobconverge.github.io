@@ -14,6 +14,8 @@ send events, not read them.
       api_host: {{ posthog_host | jsonify }},
       defaults: '2026-08-30',
       person_profiles: 'identified_only',
+      // Requires cookieless mode to be enabled in the PostHog project settings.
+      cookieless_mode: 'always',
       respect_dnt: true
     });
   }
